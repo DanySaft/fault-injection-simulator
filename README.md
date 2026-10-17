@@ -14,7 +14,7 @@ The framework is designed with a modular architecture to easily integrate new ta
 
 ## Current Progress
 
-### Phase 1: Foundation & The "Instruction Skip" Model
+### Instruction Skip Model
 - **RISC-V 32-bit Bare-Metal Emulation:** Configured Unicorn Engine to execute RISC-V binaries without an OS.
 - **Automated Execution Tracing:** Developed a hooking mechanism to record the precise execution path (PC register tracking) of a healthy execution.
 - **Instruction Skip Implementation:** Created a fault model simulating a Single Fault Injection that forces the Program Counter (PC) to skip exactly one instruction during execution.
