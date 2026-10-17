@@ -15,18 +15,18 @@ The framework is designed with a modular architecture to easily integrate new ta
 ## Current Progress
 
 ### Phase 1: Foundation & The "Instruction Skip" Model
-- [x] **RISC-V 32-bit Bare-Metal Emulation:** Configured Unicorn Engine to execute RISC-V binaries without an OS.
-- [x] **Automated Execution Tracing:** Developed a hooking mechanism to record the precise execution path (PC register tracking) of a healthy execution.
-- [x] **Instruction Skip Implementation:** Created a fault model simulating a Single Fault Injection that forces the Program Counter (PC) to skip exactly one instruction during execution.
-- [x] **Vulnerability Discovery:** Successfully bypassed a basic PIN verification algorithm by systematically fuzzing the execution path, identifying critical points of failure (bypassing conditional branches `bne` and corrupting memory loads).
+- **RISC-V 32-bit Bare-Metal Emulation:** Configured Unicorn Engine to execute RISC-V binaries without an OS.
+- **Automated Execution Tracing:** Developed a hooking mechanism to record the precise execution path (PC register tracking) of a healthy execution.
+- **Instruction Skip Implementation:** Created a fault model simulating a Single Fault Injection that forces the Program Counter (PC) to skip exactly one instruction during execution.
+- **Vulnerability Discovery:** Successfully bypassed a basic PIN verification algorithm by systematically fuzzing the execution path, identifying critical points of failure (bypassing conditional branches `bne` and corrupting memory loads).
 
 ## Next Steps
 
-- [ ] **Smart Card Scenario (PTC):** Develop a more complex, stateful C target involving a PIN Try Counter (anti-bruteforce mechanism) to simulate real-world smart card vulnerabilities.
-- [ ] **Software Hardening:** Implement industry-standard software countermeasures on the C target, including:
+- **Smart Card Scenario (PTC):** Develop a more complex, stateful C target involving a PIN Try Counter (anti-bruteforce mechanism) to simulate real-world smart card vulnerabilities.
+- **Software Hardening:** Implement industry-standard software countermeasures on the C target, including:
   - Hardened Booleans (maximizing the Hamming distance between True/False states).
   - Control Flow Integrity (CFI) via step counters.
-- [ ] **Advanced Fault Models:** Expand `fault_models.py` to include new physical attack simulations, such as Register/Memory **Bit-Flips**, to test the robustness of the implemented countermeasures.
+- **Advanced Fault Models:** Expand `fault_models.py` to include new physical attack simulations, such as Register/Memory **Bit-Flips**, to test the robustness of the implemented countermeasures.
 
 ## Setup
 
