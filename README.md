@@ -50,7 +50,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2.2 Lancer le setup
+### 2.2 Launch the setup
 
 ```bash
 ./main.py
